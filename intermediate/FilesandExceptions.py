@@ -1,8 +1,8 @@
 # Opening a file
 import os
-'''
+
 f = open("test.txt", "w")
-# print(f)
+print(f)
 # The open function takes two arguments. The first is the name of the file, and the
 # second is the mode. Mode "w" means that we are opening the file for writing.
 # If there is no file names text.txt, it will be created
@@ -40,29 +40,23 @@ def copyFile(oldFile, newFile):
     return 
 
 print(copyFile("Mathew_C25_V31.txt", "file_two.txt"))
-'''
 
 # TEXT FILES
 # A text file is a file that contains printable characters and whitespace, organized
 # into lines separated by newline characters.
-'''
+
 file = open("newFile.txt", "w")
 file.write("Now is the time")
 file.write("\nto close the file")
 file.close()
 
 file = open("newFile.txt", "r")
-# read can also take an argument that indicates how many characters to read:
-# print(file.read(16))
-print(file.readlines())
+# read() can also take an argument that indicates how many characters to read:
+print(file.read(16))
 
-# display = file.read()
-# print(display)
-
-
-# f = open("tt.txt", "w")
-# print(f)
-
+display = file.read()
+print(display) 
+# --------------------------
 
 nf = open("Example1.txt", "w")
 nf.write("Line One\nLine Two\nLine Three")
@@ -71,7 +65,6 @@ nf.close()
 nf = open("tt.txt", "r")
 print(nf.readline())
 print(nf.readlines())
-'''
 
 # The following is an example of a line-processing program. filterFile makes a
 # copy of oldFile, omitting any lines that begin with  # :
@@ -89,7 +82,9 @@ def filterFile(oldFile, newFile):
     f2.close()
     return
 
+-----------------------------------------
 # EXCEPTION
+
 filename = input("Enter a file name: ")
 try:
     f =  open(filename,"r")
